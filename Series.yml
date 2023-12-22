@@ -1,0 +1,94 @@
+templates:
+  IMDb Popular:
+    mdblist_list:
+      url: <<url>>
+      sort_by: imdbpopular.desc
+      limit: 100
+    collection_order: custom
+    sort_title: +_<<collection_name>>
+    sync_mode: sync
+    visible_library: true
+
+  IMDb Votes:
+    mdblist_list:
+      url: <<url>>
+      sort_by: imdbvotes.desc
+      limit: 100
+    collection_order: custom
+    sort_title: +_<<collection_name>>
+    sync_mode: sync
+    visible_library: true
+
+collections:
+  Just Added:
+    smart_filter:
+      any:
+        added: 30
+        episode_air_date: 30
+      sort_by: episode_added.desc
+
+  Trending Now:
+    template:
+      name: IMDb Popular
+      url: https://mdblist.com/lists/ryanito/trending-tv
+
+  British Programmes:
+    template:
+      name: IMDb Popular
+      url: https://mdblist.com/lists/m9d4/british-tv-shows
+    filters:
+      - title.not: "(US)"
+
+  US Comedies:
+    imdb_list:
+      url: https://www.imdb.com/search/title/?genres=comedy&title_type=tv_series,tv_miniseries,tv_short&country_of_origin=US
+      limit: 100
+    collection_order: custom
+    sync_mode: sync
+
+  Horror Programmes:
+    template:
+      name: IMDb Popular
+      url: https://mdblist.com/lists/garycrawfordgc/horror-shows
+
+  Sci-Fi & Fantasy Programmes:
+    template:
+      name: IMDb Popular
+      url: https://mdblist.com/lists/dummy-5/sci-fi-fantasy
+
+  Bingeworthy Dramas:
+    template:
+      name: IMDb Votes
+      url: https://mdblist.com/lists/MaxtronTV/drama-tv-shows
+
+  Docuseries:
+    smart_filter:
+      any:
+        genre: documentary,travel
+      sort_by: critic_rating.desc
+
+  Christmas Specials:
+    schedule: range(12/01-12/31)
+    sort_title: ::Christmas Specials
+    builder_level: episode
+    plex_search:
+      all:
+        genre: comedy
+      sort_by: episode_release.desc
+    filters:
+      - title.regex: (?i)(christmas|xmas|x-mas)
+      - summary.regex: (?i)(christmas|xmas|x-mas)
+        summary.not: halloween
+    collection_order: episode_release.desc
+
+  Halloween Specials:
+    schedule: range(10/01-10/31)
+    sort_title: ::Halloween Specials
+    builder_level: episode
+    plex_search:
+      all:
+        genre: comedy
+      sort_by: episode_release.desc
+    filters:
+      - title.regex: (?i)(halloween|trick(ing|s)? .{0,5} treat(ing|s)?|of horror)
+      - summary.regex: (?i)(halloween|trick(ing|s)? .{0,5} treat(ing|s)?)

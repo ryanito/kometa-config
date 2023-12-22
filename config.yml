@@ -1,0 +1,76 @@
+libraries:
+  Films:
+    metadata_path:
+      - file: config/Films.yml
+    overlay_path:
+      - file: config/Top-10-Films.yml
+  Series:
+    metadata_path:
+      - file: config/Series.yml
+    overlay_path:
+      - file: config/Top-10-Series.yml
+plex:
+  url: http://192.168.0.254:32400
+  token: ####################
+  timeout: 60
+  clean_bundles: false
+  empty_trash: false
+  optimize: false
+  db_cache:
+tmdb:
+  apikey: ####################
+  language: en
+  cache_expiration: 60
+  region:
+trakt:
+  client_id: ####################
+  client_secret: ####################
+  authorization:
+    access_token: ####################
+    token_type:
+    expires_in:
+    refresh_token: ####################
+    scope: public
+    created_at:
+  pin:
+mdblist:
+  apikey: ####################
+  cache_expiration: 60
+settings:
+  cache: true
+  cache_expiration: 60
+  asset_directory:
+  asset_folders: true
+  asset_depth: 0
+  create_asset_folders: false
+  prioritize_assets: false
+  dimensional_asset_rename: false
+  download_url_assets: false
+  show_missing_assets: true
+  show_missing_season_assets: false
+  show_missing_episode_assets: false
+  show_asset_not_needed: true
+  sync_mode: sync
+  default_collection_order:
+  minimum_items: 1
+  item_refresh_delay: 0
+  delete_below_minimum: false
+  delete_not_scheduled: false
+  run_again_delay: 0
+  missing_only_released: false
+  only_filter_missing: false
+  show_unmanaged: true
+  show_unconfigured: true
+  show_filtered: false
+  show_options: false
+  show_missing: false
+  save_report: false
+  tvdb_language: default
+  ignore_ids:
+  ignore_imdb_ids:
+  playlist_sync_to_users: all
+  playlist_report: true
+  verify_ssl: true
+  custom_repo:
+  check_nightly: false
+  playlist_exclude_users:

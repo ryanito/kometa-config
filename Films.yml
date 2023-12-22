@@ -1,0 +1,103 @@
+templates:
+  IMDb Popular:
+    mdblist_list:
+      url: <<url>>
+      sort_by: imdbpopular.desc
+      limit: 100
+    collection_order: custom
+    sort_title: +_<<collection_name>>
+    sync_mode: sync
+    visible_library: true
+    filters:
+      edition.isnot: fan edit
+
+  IMDb Votes:
+    mdblist_list:
+      url: <<url>>
+      sort_by: imdbvotes.desc
+      limit: 100
+    collection_order: custom
+    sort_title: +_<<collection_name>>
+    sync_mode: sync
+    visible_library: true
+    filters:
+      edition.isnot: fan edit
+
+collections:
+  New Releases:
+    smart_filter:
+      all:
+        release: 365
+      sort_by: added.desc
+      limit: 50
+
+  Just Added:
+    smart_filter:
+      all:
+        added: 365
+      sort_by: added.desc
+      limit: 50
+
+  Popular Films:
+    template:
+      name: IMDb Popular
+      url: https://mdblist.com/lists/adamosborne01/popular-movies
+
+  Best of 2000s:
+    template:
+      name: IMDb Popular
+      url: https://mdblist.com/lists/xilfneps/movies-2000-2009
+
+  Best of 2010s:
+    template:
+      name: IMDb Popular
+      url: https://mdblist.com/lists/xilfneps/movies-2010-2019
+
+  Cult Classics:
+    template:
+      name: IMDb Votes
+      url: https://mdblist.com/lists/oya-kesh/keyword-cult-films
+
+  Horror Films:
+    template:
+      name: IMDb Popular
+      url: https://mdblist.com/lists/hdlists/latest-hd-horror-movies-top-rated-from-1980-to-today
+
+  Comedies:
+    template:
+      name: IMDb Popular
+      url: https://mdblist.com/lists/ryanito/comedy-movies
+
+  Sci-Fi Films:
+    template:
+      name: IMDb Popular
+      url: https://mdblist.com/lists/garycrawfordgc/sci-fi
+
+  Fantasy Films:
+    template:
+      name: IMDb Popular
+      url: https://mdblist.com/lists/ryanito/fantasy-movies
+
+  British Films:
+    smart_filter:
+      all:
+        country: United Kingdom
+        country.not: United States of America, Australia, Canada
+      sort_by: release.desc
+
+  Documentaries:
+    smart_filter:
+      all:
+        genre: documentary
+      sort_by: release.desc
+
+  Christmas Films:
+    imdb_list:
+      - url: https://www.imdb.com/search/keyword/?title_type=feature&keywords=christmas-movie
+        limit: 250
+    collection_order: custom
+    filters:
+      edition.isnot: fan edit
+    visible_home: range(12/01-12/31)
+    visible_shared: range(12/01-12/31)
+    visible_library: range(12/01-12/31)

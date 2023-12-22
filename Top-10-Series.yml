@@ -1,0 +1,13 @@
+overlays:
+  Top 10:
+    overlay:
+      name: top-10
+      horizontal_align: left
+      vertical_align: top
+      horizontal_offset: 0
+      vertical_offset: 0
+    mdblist_list:
+      url: https://mdblist.com/lists/ryanito/trending-tv
+      sort_by: imdbpopular.desc
+      limit: 100
+    limit: 10
