@@ -1,0 +1,6 @@
+*.cache
+UUID
+logs/*
+assets/*
+overlays/*
+!overlays/*.png
