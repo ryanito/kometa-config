@@ -28,6 +28,7 @@ collections:
     smart_filter:
       all:
         release: 365
+        genre.not: documentary
       sort_by: added.desc
       limit: 50
 
