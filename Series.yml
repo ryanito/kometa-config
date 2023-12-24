@@ -76,8 +76,8 @@ collections:
         genre: comedy
       sort_by: episode_release.desc
     filters:
-      - title.regex: (?i)(christmas|xmas|x-mas)
-      - summary.regex: (?i)(christmas|xmas|x-mas)
+      - title.regex: (?i)(christmas|xmas|x-mas|nativity)
+      - summary.regex: (?i)(christmas|xmas|x-mas|nativity)
         summary.not: halloween
     collection_order: episode_release.desc
 
