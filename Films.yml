@@ -91,7 +91,7 @@ collections:
     smart_filter:
       all:
         genre: documentary
-      sort_by: release.desc
+      sort_by: added.desc
 
   Christmas Films:
     imdb_list:
