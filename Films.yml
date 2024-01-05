@@ -84,7 +84,8 @@ collections:
       all:
         country: United Kingdom
         country.not: United States of America, Australia, Canada
-      sort_by: release.desc
+        genre.not: documentary
+      sort_by: random
 
   Documentaries:
     smart_filter:
