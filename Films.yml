@@ -83,7 +83,7 @@ collections:
     smart_filter:
       all:
         country: United Kingdom
-        country.not: United States of America, Australia, Canada
+        country.not: United States of America, Australia, Canada, USA
         genre.not: documentary
       sort_by: random
 
