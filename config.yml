@@ -1,13 +1,13 @@
 libraries:
   Films:
-    metadata_path:
+    collection_files:
       - file: config/Films.yml
-    overlay_path:
+    overlay_files:
       - file: config/Top-10-Films.yml
   Series:
-    metadata_path:
+    collection_files:
       - file: config/Series.yml
-    overlay_path:
+    overlay_files:
       - file: config/Top-10-Series.yml
 plex:
   url: http://192.168.0.254:32400

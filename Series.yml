@@ -40,8 +40,11 @@ collections:
       - title.not: "(US)"
 
   US Comedies:
-    imdb_list:
-      url: https://www.imdb.com/search/title/?genres=comedy&title_type=tv_series,tv_miniseries,tv_short&country_of_origin=US
+    imdb_search:
+      genre: comedy
+      genre.not: drama
+      type: tv_series,tv_mini_series,tv_short
+      country.origin: US
       limit: 100
     collection_order: custom
     sync_mode: sync

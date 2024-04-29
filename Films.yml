@@ -8,8 +8,6 @@ templates:
     sort_title: +_<<collection_name>>
     sync_mode: sync
     visible_library: true
-    filters:
-      edition.isnot: fan edit
 
   IMDb Votes:
     mdblist_list:
@@ -20,8 +18,6 @@ templates:
     sort_title: +_<<collection_name>>
     sync_mode: sync
     visible_library: true
-    filters:
-      edition.isnot: fan edit
 
 collections:
   New Releases:
@@ -94,12 +90,11 @@ collections:
       sort_by: added.desc
 
   Christmas Films:
-    imdb_list:
-      - url: https://www.imdb.com/search/keyword/?title_type=feature&keywords=christmas-movie
-        limit: 250
+    imdb_search:
+      type: movie,tv_movie
+      keyword: christmas-movie
+      limit: 250
     collection_order: custom
-    filters:
-      edition.isnot: fan edit
     visible_home: range(12/01-12/31)
     visible_shared: range(12/01-12/31)
     visible_library: range(12/01-12/31)
