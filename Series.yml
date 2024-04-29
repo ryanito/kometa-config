@@ -42,7 +42,7 @@ collections:
   US Comedies:
     imdb_search:
       genre: comedy
-      genre.not: drama
+      genre.not: drama,family
       type: tv_series,tv_mini_series,tv_short
       country.origin: US
       limit: 100
